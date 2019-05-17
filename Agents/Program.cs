@@ -5,8 +5,13 @@ namespace Agents
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        { 
+            Agent[] s = new Agent[] { new NPC("Maria"), new NPC("José"), new Player("mario") };                        
+
+            foreach (Agent a in s)
+            {
+                Console.WriteLine(a + " and my movement is " + a.Move());
+            }
         }
     }
 }
